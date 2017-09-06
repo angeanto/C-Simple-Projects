@@ -1,6 +1,3 @@
-// airSeats.cpp : Defines the entry point for the console application.
-//
-
 #include "stdafx.h"
 #include<iostream>	
 #include<iomanip>
@@ -70,12 +67,8 @@ int main()
 		case 'D':
 			matrix2[row-1][4] = 'X';
 			full = full + 1;
-			break;
-
-			
+			break;		
 		}
-
-
 
 		for (row = 0; row < 7; row++)
 		{
@@ -85,20 +78,12 @@ int main()
 			cout << endl;
 		}
 
-
 		cout << 28 - full << "Remaining seats" << endl;
-
 
 	}
 	if (full == 28)
 		cout << " There are no available tickets" << endl;
 
-
-
-	
-
-
-  
 return 0;
 }
 
