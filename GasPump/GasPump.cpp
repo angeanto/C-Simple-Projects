@@ -9,9 +9,9 @@ class GasPump
 {
 public:
 	double costPerLitre,numberOfLitres,finalCharge;
-	void costFunction();
-	void amount();
-	void totalCost();
+	void costFunction(); // User gives a logic price for cost per litre between 1 and 2 $
+	void amount();// When tank's filled with 50L of gas , we terminate the procedure.Each press of enter adds up .5L to the tank
+	void totalCost(); // multiplies total amount of gas with cost per litre 
 
 };
 
@@ -46,13 +46,13 @@ void GasPump::amount()
 		numberOfLitres = 0;
 		while ((numberOfLitres >= 0) && (numberOfLitres <= 50))
 		{
-			if (cin.get() == '\n')
+			if (cin.get() == '\n') // enter pressing 
 				numberOfLitres = numberOfLitres + 0.5;
 			else if (cin.get() != '\n')
 				cout << "Invalid input" << endl;
-            else if (cin.get() == 'P')
+                        else if (cin.get() == 'P') // End of program when P is pressed
 					break;
-			cout << numberOfLitres-0.5;
+			cout << numberOfLitres-0.5; // somehow numberofLitres=0.5 that's why i subtract it 
 		
 		}
 		}
